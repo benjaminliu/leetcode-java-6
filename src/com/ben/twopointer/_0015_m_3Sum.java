@@ -1,4 +1,4 @@
-package com.ben.hashtable;
+package com.ben.twopointer;
 
 import com.ben.common.PrintUtil;
 
