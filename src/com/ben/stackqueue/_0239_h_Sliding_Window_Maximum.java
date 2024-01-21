@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 public class _0239_h_Sliding_Window_Maximum {
-    class Solution {
+    static class Solution {
         public int[] maxSlidingWindow(int[] nums, int k) {
             MyQueue queue = new MyQueue();
             for (int i = 0; i < k; i++) {
