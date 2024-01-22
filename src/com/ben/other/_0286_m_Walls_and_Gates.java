@@ -7,6 +7,7 @@ import java.util.Queue;
 
 public class _0286_m_Walls_and_Gates {
 
+    static
     class Solution {
         private static final int EMPTY = Integer.MAX_VALUE;
         private static final int GATE = 0;
