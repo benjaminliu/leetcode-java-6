@@ -1,4 +1,4 @@
-package com.ben.array;
+package com.ben.array.binarysearch;
 
 public class _0704_e_Binary_Search {
 

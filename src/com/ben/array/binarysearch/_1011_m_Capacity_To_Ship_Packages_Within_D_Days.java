@@ -1,4 +1,4 @@
-package com.ben.other;
+package com.ben.array.binarysearch;
 
 public class _1011_m_Capacity_To_Ship_Packages_Within_D_Days {
     class Solution {

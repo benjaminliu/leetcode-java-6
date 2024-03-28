@@ -1,4 +1,4 @@
-package com.ben.array;
+package com.ben.array.binarysearch;
 
 public class _0035_e_Search_Insert_Position {
 
