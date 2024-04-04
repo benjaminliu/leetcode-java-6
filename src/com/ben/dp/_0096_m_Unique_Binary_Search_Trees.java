@@ -17,6 +17,8 @@ public class _0096_m_Unique_Binary_Search_Trees {
 
             for (int i = 2; i <= n; i++) {
                 for (int j = 1; j <= i; j++) {
+                    //dp[j - 1] left subtree's node count
+                    //dp[i - j] right subtree's node oount
                     dp[i] += dp[j - 1] * dp[i - j];
                 }
             }
