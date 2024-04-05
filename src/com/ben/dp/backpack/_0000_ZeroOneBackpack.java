@@ -1,6 +1,6 @@
 package com.ben.dp.backpack;
 
-public class ZeroOneBackpack {
+public class _0000_ZeroOneBackpack {
 
     public static void main(String[] args) {
         int[] weight = {1, 3, 4};
@@ -12,7 +12,7 @@ public class ZeroOneBackpack {
 
     public static int maxValue(int[] weight, int[] value, int bagSize) {
         int n = weight.length;
-        //[item][until current item, what is the max value]
+        //[item][weight in the backpack] = until current item, what is the max value
         int[][] dp = new int[n][bagSize + 1];
 
         //put first item into backpack
