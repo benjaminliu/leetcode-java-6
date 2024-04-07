@@ -23,8 +23,8 @@ public class _0000_ZeroOneBackpack {
         //try putting other items into backpack one by one
         for (int i = 1; i < n; i++) {
             for (int j = 1; j <= bagSize; j++) {
-                //cannot put current item into backpack, because its weight is bigger than current capacity
-                if (j < weight[i]) {
+                // current item cannot be put into backpack, because its weight is bigger than current capacity
+                if (weight[i] > j) {
                     dp[i][j] = dp[i - 1][j];
                 } else {
                     //Math.max(do not include current item,  include current item so need to remove other item with same weight)

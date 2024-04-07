@@ -21,7 +21,7 @@ public class _1049_m_Last_Stone_Weight_II {
 
             for (int i = 1; i < n; i++) {
                 for (int j = 0; j <= bagSize; j++) {
-                    if (j < stones[i]) {
+                    if (stones[i] > j) {
                         dp[i][j] = dp[i - 1][j];
                     } else {
                         dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - stones[i]] + stones[i]);

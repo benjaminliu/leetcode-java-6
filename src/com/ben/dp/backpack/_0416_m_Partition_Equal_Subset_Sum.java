@@ -35,7 +35,7 @@ public class _0416_m_Partition_Equal_Subset_Sum {
 
             for (int i = 1; i < n; i++) {
                 for (int j = 0; j <= bagSize; j++) {
-                    if (j < nums[i]) {
+                    if (nums[i] > j) {
                         dp[i][j] = dp[i - 1][j];
                     } else {
                         dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - nums[i]] + nums[i]);
