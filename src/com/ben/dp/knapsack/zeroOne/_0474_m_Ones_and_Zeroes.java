@@ -1,4 +1,4 @@
-package com.ben.dp.backpack;
+package com.ben.dp.knapsack.zeroOne;
 
 public class _0474_m_Ones_and_Zeroes {
     class Solution {

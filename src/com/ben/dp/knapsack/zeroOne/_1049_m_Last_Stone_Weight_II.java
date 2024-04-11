@@ -1,4 +1,4 @@
-package com.ben.dp.backpack;
+package com.ben.dp.knapsack.zeroOne;
 
 import java.util.Arrays;
 
