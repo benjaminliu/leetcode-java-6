@@ -22,12 +22,26 @@ public class _0518_m_Coin_Change_II {
                         // if choose coins[i], then the way count is dp[i][j - coins[i]] (we need put coins[i] into backpack, so we need to remove some items)
                         // if not choose coins[i], then the way count is dp[i - 1][j]
                         // so total way count is dp[i][j - coins[i]] + dp[i - 1][j]
-                        dp[i][j] = dp[i-1][j - coins[i]] + dp[i - 1][j];
+                        dp[i][j] = dp[i - 1][j - coins[i]] + dp[i - 1][j];
                     }
                 }
             }
 
             return dp[coins.length - 1][amount];
+        }
+    }
+
+    class Solution1 {
+        public int change(int amount, int[] coins) {
+            int[] dp = new int[amount + 1];
+            dp[0] = 1;
+            for (int i = 0; i < coins.length; i++) {
+                for (int j = coins[i]; j <= amount; j++) {
+                    dp[j] += dp[j - coins[i]];
+                }
+
+            }
+            return dp[amount];
         }
     }
 }
