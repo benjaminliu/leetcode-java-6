@@ -3,6 +3,7 @@ package com.ben.backtracking;
 import com.ben.common.PrintUtil;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class _0093_m_Restore_IP_Addresses {
@@ -20,11 +21,11 @@ public class _0093_m_Restore_IP_Addresses {
                 return res;
             }
 
-            helper(s, 0, 4, new ArrayList<>(), res);
+            helper(s, 0, 4, new LinkedList<>(), res);
             return res;
         }
 
-        private void helper(String s, int start, int seg, ArrayList<String> list, List<String> res) {
+        private void helper(String s, int start, int seg, LinkedList<String> list, List<String> res) {
             if (seg == 1) {
                 if (isValid(s, start, s.length() - 1)) {
                     list.add(s.substring(start, s.length()));

@@ -1,6 +1,7 @@
 package com.ben.backtracking;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class _0131_m_Palindrome_Partitioning {
@@ -9,12 +10,12 @@ public class _0131_m_Palindrome_Partitioning {
         public List<List<String>> partition(String s) {
             List<List<String>> res = new ArrayList<>();
 
-            helper(s, 0, new ArrayList<String>(), res);
+            helper(s, 0, new LinkedList<String>(), res);
 
             return res;
         }
 
-        private void helper(String s, int start, ArrayList<String> list, List<List<String>> res) {
+        private void helper(String s, int start, LinkedList<String> list, List<List<String>> res) {
             if (start >= s.length()) {
                 res.add(new ArrayList<>(list));
                 return;

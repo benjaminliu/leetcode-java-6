@@ -2,6 +2,7 @@ package com.ben.backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class _0090_m_Subsets_II {
@@ -11,11 +12,11 @@ public class _0090_m_Subsets_II {
 
             Arrays.sort(nums);
             List<List<Integer>> res = new ArrayList<>();
-            helper(nums, 0, new ArrayList<>(), res);
+            helper(nums, 0, new LinkedList<>(), res);
             return res;
         }
 
-        private void helper(int[] nums, int start, ArrayList<Integer> list, List<List<Integer>> res) {
+        private void helper(int[] nums, int start, LinkedList<Integer> list, List<List<Integer>> res) {
             res.add(new ArrayList<>(list));
 
             for (int i = start; i < nums.length; i++) {

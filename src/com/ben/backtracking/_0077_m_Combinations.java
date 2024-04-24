@@ -1,18 +1,19 @@
 package com.ben.backtracking;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class _0077_m_Combinations {
     class Solution {
         public List<List<Integer>> combine(int n, int k) {
             List<List<Integer>> res = new ArrayList<>();
-            helper(n, k, 1, new ArrayList<Integer>(), res);
+            helper(n, k, 1, new LinkedList<Integer>(), res);
 
             return res;
         }
 
-        private void helper(int n, int k, int start, ArrayList<Integer> list, List<List<Integer>> res) {
+        private void helper(int n, int k, int start, LinkedList<Integer> list, List<List<Integer>> res) {
             if (list.size() == k) {
                 res.add(new ArrayList<>(list));
                 return;
@@ -29,12 +30,12 @@ public class _0077_m_Combinations {
     class Solution1 {
         public List<List<Integer>> combine(int n, int k) {
             List<List<Integer>> res = new ArrayList<>();
-            helper(n, k, 1, new ArrayList<Integer>(), res);
+            helper(n, k, 1, new LinkedList<Integer>(), res);
 
             return res;
         }
 
-        private void helper(int n, int k, int start, ArrayList<Integer> list, List<List<Integer>> res) {
+        private void helper(int n, int k, int start, LinkedList<Integer> list, List<List<Integer>> res) {
             if (list.size() == k) {
                 res.add(new ArrayList<>(list));
                 return;

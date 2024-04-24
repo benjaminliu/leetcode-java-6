@@ -2,6 +2,7 @@ package com.ben.backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class _0047_m_Permutations_II {
@@ -11,11 +12,11 @@ public class _0047_m_Permutations_II {
 
             Arrays.sort(nums);
             boolean[] used = new boolean[nums.length];
-            helper(nums, used, new ArrayList<>(), res);
+            helper(nums, used, new LinkedList<>(), res);
             return res;
         }
 
-        private void helper(int[] nums, boolean[] used, ArrayList<Integer> list, List<List<Integer>> res) {
+        private void helper(int[] nums, boolean[] used, LinkedList<Integer> list, List<List<Integer>> res) {
             if (list.size() == nums.length) {
                 res.add(new ArrayList<>(list));
                 return;
