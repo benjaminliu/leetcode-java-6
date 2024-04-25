@@ -6,8 +6,9 @@ public class _0122_m_Best_Time_to_Buy_and_Sell_Stock_II {
             int n = prices.length;
             int[][] dp = new int[n][2];
 
-            //Hold stock, how many cash, because we spend money to buy stock, so current cash is negative
+            //Buy stock, how many cash, because we spend money to buy stock, so current cash is negative
             dp[0][0] = -prices[0];
+            //Sell stock
             dp[0][1] = 0;
 
             for (int i = 1; i < n; i++) {

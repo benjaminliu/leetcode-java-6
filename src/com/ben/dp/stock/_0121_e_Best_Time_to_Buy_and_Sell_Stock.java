@@ -12,9 +12,9 @@ public class _0121_e_Best_Time_to_Buy_and_Sell_Stock {
                 dp[i] = new int[2];
             }
 
-            //dp[n][0]: how much money is spent to buy stock, the min the better
+            //dp[n][0]: buy stock, the min the better
             dp[0][0] = prices[0];
-            //dp[n][1]: profit, the max the better
+            //dp[n][1]: sell stock, the max the better
             dp[0][1] = 0;
 
             for (int i = 1; i < prices.length; i++) {
@@ -25,6 +25,25 @@ public class _0121_e_Best_Time_to_Buy_and_Sell_Stock {
             }
 
             return dp[prices.length - 1][1];
+        }
+    }
+
+    class Solution1 {
+        public int maxProfit(int[] prices) {
+            int n = prices.length;
+
+            int[][] dp = new int[n][2];
+            //Buy stock, how many cash, because we spend money to buy stock, so current cash is negative
+            dp[0][0] = -prices[0];
+            //sell stock
+            dp[0][1] = 0;
+
+            for (int i = 1; i < n; i++) {
+                dp[i][0] = Math.max(dp[i - 1][0], -prices[i]);
+                dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] + prices[i]);
+            }
+
+            return dp[n - 1][1];
         }
     }
 }
